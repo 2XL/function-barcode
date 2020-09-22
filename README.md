@@ -55,12 +55,12 @@ FUNCTION_TARGET=convertBarcode
    ```
    
    package.json
-   ```json
-       {
-         "scripts": {
+   ```js
+       [{
+       "scripts" : {
             "start": "functions-framework --target=convertBarcode"
           }
-       }
+       }]   
     ```
    
    npm start
@@ -77,18 +77,36 @@ FUNCTION_TARGET=convertBarcode
    
    ```
 
-
 4. Deploying the Cloud Function
 
    ```
    terraform plan
    ```
 
+5. Manual deployment
+    
+   ```
+   gcloud functions deploy ${FUNCTION_TARGET} \
+    --trigger-http \
+    --runtime="nodejs10"
+   
+   output:
+   ... url endpoint where the function is exposed.
+    
+   ```
 
-
-
+6. Logging
+    
+   ```
+   logs are exposed through cloud  events.
+   ```
 
 ### resources
 
 - [functions](https://cloud.google.com/functions)
 - [jsBarcode](https://github.com/lindell/JsBarcode)
+
+### common issues
+
+- the user does not have permission to access project "..." or it may not exist
+

@@ -77,14 +77,17 @@ default:
 	@echo MAKEFILE_LIST: ${MAKEFILE_LIST}
 	@env_info.sh
 
+init:
+	@echo Init
+	@terraform init -var-file terrform.tfvars
 
 plan:
 	@echo Plan
-	@cd terraform && terraform plan -out out.tfplan
+	@terraform plan -out out.tfplan -var-file terraform.tfvars
 
 apply:
 	@echo Apply
-	@cd terraform && terraform apply out.tfplan
+	@terraform apply out.tfplan
 
 
 kubeproxy:
