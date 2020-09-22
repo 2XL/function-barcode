@@ -1,0 +1,27 @@
+{
+  "name": "barcode",
+  "version": "1.0.0",
+  "description": "Cloud function barcode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "functions-framework --target=convertBarcode"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2XL/function-barcode.git"
+  },
+  "author": "Joe Zou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2XL/function-barcode/issues"
+  },
+  "homepage": "https://github.com/2XL/function-barcode#readme",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.7.1",
+    "@octokit/rest": "15.2.6",
+    "canvas": "^2.6.1",
+    "jsbarcode": "^3.11.0",
+    "xmldom": "^0.3.0"
+  }
+}

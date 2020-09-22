@@ -1,15 +1,15 @@
 # The configuration for the `remote` backend.
-terraform {
-  backend "remote" {
-    # The name of your Terraform Cloud organization.
-    organization = "example-organization"
-
-    # The name of the Terraform Cloud workspace to store Terraform state files in.
-    workspaces {
-      name = "example-workspace"
-    }
-  }
-}
+//terraform {
+//  backend "remote" {
+//    # The name of your Terraform Cloud organization.
+//    organization = "example-organization"
+//
+//    # The name of the Terraform Cloud workspace to store Terraform state files in.
+//    workspaces {
+//      name = "example-workspace"
+//    }
+//  }
+//}
 
 # An example resource that does nothing.
 resource "null_resource" "example" {
@@ -17,3 +17,5 @@ resource "null_resource" "example" {
     value = "A example resource that does nothing!"
   }
 }
+
+
